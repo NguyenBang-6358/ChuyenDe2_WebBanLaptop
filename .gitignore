@@ -1,0 +1,11 @@
+# .NET / C#
+**/bin/
+**/obj/
+**/.vs/
+*.user
+
+# Frontend
+**/node_modules/
+**/dist/
+**/.tanstack/
+**/.env
