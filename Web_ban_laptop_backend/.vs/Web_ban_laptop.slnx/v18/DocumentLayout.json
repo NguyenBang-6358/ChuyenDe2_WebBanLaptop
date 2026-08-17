@@ -1,0 +1,326 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\dathangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\dathangdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\cartitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\cartitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\danhgiacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\giohangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\khuyenmaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\khuyenmaicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\nguoidungcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\nguoidungcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\orderitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\orderitemrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\phukiencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\phukiencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\phukiendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\phukiendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\productdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\productdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\sanphamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:controllers\\uploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|c:\\users\\acer\\desktop\\web_ban _laptop\\web_ban_laptop_backend\\entities\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A03B5A1-D678-C2A5-009F-8C8937618298}|Web_ban_laptop.csproj|solutionrelative:entities\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartItemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\CartItemRequest.cs",
+              "RelativeDocumentMoniker": "Controllers\\CartItemRequest.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\CartItemRequest.cs",
+              "RelativeToolTip": "Controllers\\CartItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:58:23.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DanhGiaController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DanhGiaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DanhGiaController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DanhGiaController.cs",
+              "RelativeToolTip": "Controllers\\DanhGiaController.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:58:10.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DanhMucController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DanhMucController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DanhMucController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DanhMucController.cs",
+              "RelativeToolTip": "Controllers\\DanhMucController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:58:03.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatHangDto.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DatHangDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\DatHangDto.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DatHangDto.cs",
+              "RelativeToolTip": "Controllers\\DatHangDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:49.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAALAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:41:56.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:40:59.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DonHangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DonHangController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\DonHangController.cs",
+              "RelativeToolTip": "Controllers\\DonHangController.cs",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:34.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GioHangController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\GioHangController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GioHangController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\GioHangController.cs",
+              "RelativeToolTip": "Controllers\\GioHangController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:23.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "KhuyenMaiController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\KhuyenMaiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KhuyenMaiController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\KhuyenMaiController.cs",
+              "RelativeToolTip": "Controllers\\KhuyenMaiController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:16.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NguoiDungController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\NguoiDungController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NguoiDungController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\NguoiDungController.cs",
+              "RelativeToolTip": "Controllers\\NguoiDungController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:08.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrderItemRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\OrderItemRequest.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderItemRequest.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\OrderItemRequest.cs",
+              "RelativeToolTip": "Controllers\\OrderItemRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:57:04.357Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PhuKienController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\PhuKienController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PhuKienController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\PhuKienController.cs",
+              "RelativeToolTip": "Controllers\\PhuKienController.cs",
+              "ViewState": "AgIAALoAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:56:51.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PhuKienDto.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\PhuKienDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\PhuKienDto.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\PhuKienDto.cs",
+              "RelativeToolTip": "Controllers\\PhuKienDto.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:56:46.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:54:17.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ProductDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\ProductDetailDto.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductDetailDto.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\ProductDetailDto.cs",
+              "RelativeToolTip": "Controllers\\ProductDetailDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:54:01.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UploadController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\UploadController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UploadController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\UploadController.cs",
+              "RelativeToolTip": "Controllers\\UploadController.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:53:47.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SanPhamController.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\SanPhamController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SanPhamController.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Controllers\\SanPhamController.cs",
+              "RelativeToolTip": "Controllers\\SanPhamController.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:25:57.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Entities\\SanPham.cs",
+              "RelativeDocumentMoniker": "Entities\\SanPham.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\Web_ban _laptop\\Web_ban_laptop_backend\\Entities\\SanPham.cs",
+              "RelativeToolTip": "Entities\\SanPham.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAA4wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-16T03:25:41.174Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

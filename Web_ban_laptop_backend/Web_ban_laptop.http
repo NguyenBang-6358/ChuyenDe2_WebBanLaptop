@@ -1,0 +1,6 @@
+@Web_ban_laptop_HostAddress = http://localhost:5009
+
+GET {{Web_ban_laptop_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

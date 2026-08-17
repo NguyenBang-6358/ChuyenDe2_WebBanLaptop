@@ -1,0 +1,142 @@
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.exe
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.pdb
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\appsettings.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.staticwebassets.endpoints.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.deps.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Web_ban_laptop.runtimeconfig.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.csproj.AssemblyReference.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.AssemblyInfo.cs
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\scopedcss\bundle\Web_ban_laptop.styles.css
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_.1CB8CF7A.Up2Date
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\refint\Web_ban_laptop.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.pdb
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\Web_ban_laptop.genruntimeconfig.cache
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\ref\Web_ban_laptop.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\appsettings.Development.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\appsettings.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.staticwebassets.endpoints.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.exe
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.deps.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.runtimeconfig.json
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Web_ban_laptop.pdb
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.EntityFrameworkCore.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.Logging.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.Extensions.Options.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.Logging.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Microsoft.OpenApi.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\MySqlConnector.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\verify_build\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Acer\source\repos\Web_ban_laptop\Web_ban_laptop\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\appsettings.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.staticwebassets.endpoints.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.exe
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.deps.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.runtimeconfig.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.pdb
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\MySqlConnector.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.csproj.AssemblyReference.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.AssemblyInfoInputs.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.AssemblyInfo.cs
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\scopedcss\bundle\Web_ban_laptop.styles.css
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_.1CB8CF7A.Up2Date
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\refint\Web_ban_laptop.dll
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.pdb
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\Web_ban_laptop.genruntimeconfig.cache
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\ref\Web_ban_laptop.dll
+c:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\bin\Debug\net8.0\Web_ban_laptop.staticwebassets.runtime.json
+C:\Users\Acer\Desktop\Web_ban _laptop\Web_ban_laptop_backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
