@@ -270,12 +270,6 @@ export function Header() {
           </div>
           <div className="flex items-center gap-4 text-secondary-foreground/70">
             <span>Hotline: {settings.hotline}</span>
-            <Link
-              to={isAdminUser ? "/admin" : "/admin/login"}
-              className="hover:text-red-600 transition-colors font-medium text-red-500"
-            >
-              Kênh quản trị
-            </Link>
           </div>
         </div>
       </div>
