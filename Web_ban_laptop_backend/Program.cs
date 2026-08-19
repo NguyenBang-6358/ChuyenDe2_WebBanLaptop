@@ -16,7 +16,7 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<DataContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+    options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 36))));
 
 var jwtKey = builder.Configuration["Jwt:Key"] ?? "SieuSecretKeyBaoMatTuyetDoiLaptopStore2026Net8Apis!";
 builder.Services.AddAuthentication(options =>
@@ -104,7 +104,7 @@ app.UseSwaggerUI(c => {
     c.RoutePrefix = string.Empty;
 });
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection(); // Render handles HTTPS
 
 var uploadsPath = Path.Combine(app.Environment.ContentRootPath, "uploads");
 if (!Directory.Exists(uploadsPath))
@@ -124,6 +124,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
 
 
 

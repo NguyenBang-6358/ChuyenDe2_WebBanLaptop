@@ -9,15 +9,16 @@ COPY . .
 RUN dotnet publish "Web_ban_laptop.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # Runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:8.0-jammy-chiseled AS final
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+
+RUN mkdir -p uploads
 
 ENV ASPNETCORE_URLS=http://+:8080
 ENV DOTNET_EnableDiagnostics=0
 ENV DOTNET_GCServer=0
 ENV DOTNET_GCHeapHardLimit=0x10000000
-ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
 EXPOSE 8080
 
