@@ -1682,7 +1682,7 @@ function AdminDashboardLayout() {
   const handleUpdateOrderStatus = async (orderId: string, nextStatus: string) => {
     try {
       await updateAdminOrderStatus(orderId, { trangThai: nextStatus });
-      toast.success(`Cập nhật trạng thái đơn hàng ${orderId} thành công!`);
+      toast.success(`Cập nhật trạng thái đơn hàng #${orderId} thành công!`);
       refetchOrders();
       refetchStats?.();
       // Refresh the detail modal if it's open
@@ -1691,10 +1691,16 @@ function AdminDashboardLayout() {
         setSelectedOrder(updated);
       }
     } catch (err: any) {
-      console.error(err);
-      toast.error(
-        err.response?.data?.message || err.message || "Không thể cập nhật trạng thái đơn hàng",
-      );
+      console.error("Lỗi cập nhật trạng thái đơn hàng:", err);
+      const resData = err.response?.data;
+      const errorMsg =
+        (typeof resData === "string" && resData) ||
+        resData?.message ||
+        resData?.title ||
+        resData?.error ||
+        err.message ||
+        "Không thể cập nhật trạng thái đơn hàng (HTTP 500)";
+      toast.error(errorMsg);
     }
   };
 
@@ -2640,15 +2646,19 @@ function AdminDashboardLayout() {
                     <tbody className="divide-y divide-slate-100 text-xs text-slate-700 font-medium">
                       {recentOrders.map((order) => {
                         const statusColors: Record<string, string> = {
+                          cho_xu_ly: "bg-amber-50 text-amber-600 border-amber-100",
                           cho_xac_nhan: "bg-amber-50 text-amber-600 border-amber-100",
                           da_xac_nhan: "bg-blue-50 text-blue-600 border-blue-100",
+                          dang_giao_hang: "bg-purple-50 text-purple-600 border-purple-100",
                           dang_giao: "bg-purple-50 text-purple-600 border-purple-100",
                           hoan_thanh: "bg-emerald-50 text-emerald-600 border-emerald-100",
                           da_huy: "bg-rose-50 text-rose-600 border-rose-100",
                         };
                         const statusLabels: Record<string, string> = {
+                          cho_xu_ly: "Chờ xử lý",
                           cho_xac_nhan: "Chờ xác nhận",
                           da_xac_nhan: "Đã xác nhận",
+                          dang_giao_hang: "Đang giao hàng",
                           dang_giao: "Đang giao",
                           hoan_thanh: "Hoàn thành",
                           da_huy: "Đã hủy",
@@ -3063,29 +3073,34 @@ function AdminDashboardLayout() {
               <div className="flex flex-wrap gap-2 border-b border-slate-200 pb-px">
                 {[
                   { key: "All", label: "Tất cả đơn hàng" },
-                  { key: "cho_xac_nhan", label: "Chờ xác nhận" },
+                  { key: "cho_xu_ly", altKey: "cho_xac_nhan", label: "Chờ xử lý" },
                   { key: "da_xac_nhan", label: "Đã xác nhận" },
-                  { key: "dang_giao", label: "Đang giao" },
+                  { key: "dang_giao_hang", altKey: "dang_giao", label: "Đang giao" },
                   { key: "hoan_thanh", label: "Hoàn thành" },
                   { key: "da_huy", label: "Đã hủy" },
-                ].map((tab) => (
-                  <button
-                    key={tab.key}
-                    onClick={() => setSelectedOrderStatusFilter(tab.key)}
-                    className={`pb-3 px-3 text-xs font-semibold border-b-2 transition-all relative ${selectedOrderStatusFilter === tab.key
-                        ? "border-red-600 text-red-600"
-                        : "border-transparent text-slate-400 hover:text-slate-600"
-                      }`}
-                  >
-                    {tab.label}
-                    {tab.key !== "All" &&
-                      ordersList.filter((o) => o.status === tab.key).length > 0 && (
+                ].map((tab) => {
+                  const count = tab.key === "All"
+                    ? ordersList.length
+                    : ordersList.filter((o) => o.status === tab.key || (tab.altKey && o.status === tab.altKey)).length;
+                  const isSelected = selectedOrderStatusFilter === tab.key || (tab.altKey && selectedOrderStatusFilter === tab.altKey);
+                  return (
+                    <button
+                      key={tab.key}
+                      onClick={() => setSelectedOrderStatusFilter(tab.key)}
+                      className={`pb-3 px-3 text-xs font-semibold border-b-2 transition-all relative ${isSelected
+                          ? "border-red-600 text-red-600"
+                          : "border-transparent text-slate-400 hover:text-slate-600"
+                        }`}
+                    >
+                      {tab.label}
+                      {tab.key !== "All" && count > 0 && (
                         <span className="ml-1.5 text-[9px] px-1 py-0.5 rounded-full bg-slate-100 text-slate-600 font-bold">
-                          {ordersList.filter((o) => o.status === tab.key).length}
+                          {count}
                         </span>
                       )}
-                  </button>
-                ))}
+                    </button>
+                  );
+                })}
               </div>
 
               {/* Data Table: Orders List */}
@@ -3122,19 +3137,25 @@ function AdminDashboardLayout() {
                           .filter(
                             (o) =>
                               selectedOrderStatusFilter === "All" ||
-                              o.status === selectedOrderStatusFilter,
+                              o.status === selectedOrderStatusFilter ||
+                              (selectedOrderStatusFilter === "cho_xu_ly" && o.status === "cho_xac_nhan") ||
+                              (selectedOrderStatusFilter === "dang_giao_hang" && o.status === "dang_giao"),
                           )
                           .map((order) => {
                             const statusColors: Record<string, string> = {
+                              cho_xu_ly: "bg-amber-50 text-amber-600 border-amber-100",
                               cho_xac_nhan: "bg-amber-50 text-amber-600 border-amber-100",
                               da_xac_nhan: "bg-blue-50 text-blue-600 border-blue-100",
+                              dang_giao_hang: "bg-purple-50 text-purple-600 border-purple-100",
                               dang_giao: "bg-purple-50 text-purple-600 border-purple-100",
                               hoan_thanh: "bg-emerald-50 text-emerald-600 border-emerald-100",
                               da_huy: "bg-rose-50 text-rose-600 border-rose-100",
                             };
                             const statusLabels: Record<string, string> = {
+                              cho_xu_ly: "Chờ xử lý",
                               cho_xac_nhan: "Chờ xác nhận",
                               da_xac_nhan: "Đã xác nhận",
+                              dang_giao_hang: "Đang giao hàng",
                               dang_giao: "Đang giao",
                               hoan_thanh: "Hoàn thành",
                               da_huy: "Đã hủy",
@@ -5103,23 +5124,23 @@ function AdminDashboardLayout() {
                         <p className="text-slate-900">
                           <span className="text-slate-400 font-normal">Trạng thái: </span>
                           <span
-                            className={`px-2 py-0.5 rounded-full text-[9px] font-bold border ${selectedOrder.trangThai === "cho_xac_nhan"
+                            className={`px-2 py-0.5 rounded-full text-[9px] font-bold border ${selectedOrder.trangThai === "cho_xu_ly" || selectedOrder.trangThai === "cho_xac_nhan"
                                 ? "bg-amber-50 text-amber-600 border-amber-100"
                                 : selectedOrder.trangThai === "da_xac_nhan"
                                   ? "bg-blue-50 text-blue-600 border-blue-100"
-                                  : selectedOrder.trangThai === "dang_giao"
+                                  : selectedOrder.trangThai === "dang_giao_hang" || selectedOrder.trangThai === "dang_giao"
                                     ? "bg-purple-50 text-purple-600 border-purple-100"
                                     : selectedOrder.trangThai === "hoan_thanh"
                                       ? "bg-emerald-50 text-emerald-600 border-emerald-100"
                                       : "bg-rose-50 text-rose-600 border-rose-100"
                               }`}
                           >
-                            {selectedOrder.trangThai === "cho_xac_nhan"
-                              ? "Chờ xác nhận"
+                            {selectedOrder.trangThai === "cho_xu_ly" || selectedOrder.trangThai === "cho_xac_nhan"
+                              ? "Chờ xử lý"
                               : selectedOrder.trangThai === "da_xac_nhan"
                                 ? "Đã xác nhận"
-                                : selectedOrder.trangThai === "dang_giao"
-                                  ? "Đang giao"
+                                : selectedOrder.trangThai === "dang_giao_hang" || selectedOrder.trangThai === "dang_giao"
+                                  ? "Đang giao hàng"
                                   : selectedOrder.trangThai === "hoan_thanh"
                                     ? "Hoàn thành"
                                     : "Đã hủy"}
@@ -5136,30 +5157,36 @@ function AdminDashboardLayout() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        { key: "cho_xac_nhan", label: "Chờ xử lý", activeClass: "bg-orange-500 text-white border-orange-500" },
+                        { key: "cho_xu_ly", label: "Chờ xử lý", activeClass: "bg-orange-500 text-white border-orange-500" },
                         { key: "da_xac_nhan", label: "Đã xác nhận", activeClass: "bg-indigo-600 text-white border-indigo-600" },
-                        { key: "dang_giao", label: "Đang giao hàng", activeClass: "bg-purple-600 text-white border-purple-600" },
+                        { key: "dang_giao_hang", label: "Đang giao hàng", activeClass: "bg-purple-600 text-white border-purple-600" },
                         { key: "hoan_thanh", label: "Hoàn thành", activeClass: "bg-emerald-600 text-white border-emerald-600" },
                         { key: "da_huy", label: "Hủy đơn", activeClass: "bg-red-600 text-white border-red-600" },
-                      ].map((s) => (
-                        <button
-                          key={s.key}
-                          onClick={() =>
-                            handleUpdateOrderStatus(
-                              String(selectedOrder.maDonHang),
-                              s.key,
-                            )
-                          }
-                          disabled={selectedOrder.trangThai === s.key}
-                          className={`px-4 py-2 rounded-md text-xs font-bold border transition-colors cursor-pointer disabled:cursor-default ${
-                            selectedOrder.trangThai === s.key
-                              ? s.activeClass
-                              : "bg-white text-slate-700 border-slate-300 hover:bg-slate-50"
-                          }`}
-                        >
-                          {s.label}
-                        </button>
-                      ))}
+                      ].map((s) => {
+                        const isActive =
+                          selectedOrder.trangThai === s.key ||
+                          (s.key === "cho_xu_ly" && selectedOrder.trangThai === "cho_xac_nhan") ||
+                          (s.key === "dang_giao_hang" && selectedOrder.trangThai === "dang_giao");
+                        return (
+                          <button
+                            key={s.key}
+                            onClick={() =>
+                              handleUpdateOrderStatus(
+                                String(selectedOrder.maDonHang),
+                                s.key,
+                              )
+                            }
+                            disabled={isActive}
+                            className={`px-4 py-2 rounded-md text-xs font-bold border transition-colors cursor-pointer disabled:cursor-default ${
+                              isActive
+                                ? s.activeClass
+                                : "bg-white text-slate-700 border-slate-300 hover:bg-slate-50"
+                            }`}
+                          >
+                            {s.label}
+                          </button>
+                        );
+                      })}
                     </div>
                   </div>
 
@@ -5188,6 +5215,8 @@ function AdminDashboardLayout() {
                                   ? item.anhDaiDien
                                   : `${API_BASE_URL}${item.anhDaiDien}`
                                 : "/placeholder.svg";
+                              const unitPrice = Number(item.donGia ?? item.don_gia ?? item.gia ?? item.price ?? 0);
+                              const qty = Number(item.soLuong ?? item.so_luong ?? item.quantity ?? 1);
                               return (
                                 <tr
                                   key={item.maChiTiet || idx}
@@ -5207,13 +5236,13 @@ function AdminDashboardLayout() {
                                     {item.tenSanPham}
                                   </td>
                                   <td className="py-3 px-4 text-center text-slate-900">
-                                    {item.soLuong}
+                                    {qty}
                                   </td>
                                   <td className="py-3 px-4 text-right font-bold">
-                                    {formatVND(item.donGia)}
+                                    {formatVND(unitPrice)}
                                   </td>
                                   <td className="py-3 px-4 text-right font-bold text-slate-900">
-                                    {formatVND(item.soLuong * item.donGia)}
+                                    {formatVND(unitPrice * qty)}
                                   </td>
                                 </tr>
                               );

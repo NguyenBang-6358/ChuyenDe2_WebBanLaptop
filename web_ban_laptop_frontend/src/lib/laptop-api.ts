@@ -1755,12 +1755,33 @@ export async function fetchAdminOrderById(id: number | string): Promise<AdminOrd
   return data;
 }
 
-/** Cập nhật trạng thái đơn hàng: PUT /api/admin/orders/{id}/status */
+/** Cập nhật trạng thái đơn hàng: PUT /api/admin/orders/{id}/status với endpoint dự phòng */
 export async function updateAdminOrderStatus(
   id: number | string,
   status: AdminUpdateOrderStatusRequest,
 ): Promise<void> {
-  await adminApi.put(`/api/admin/orders/${id}/status`, status);
+  let normalizedStatus = status.trangThai;
+  if (normalizedStatus === "cho_xac_nhan") normalizedStatus = "cho_xu_ly";
+  if (normalizedStatus === "dang_giao") normalizedStatus = "dang_giao_hang";
+
+  try {
+    await adminApi.put(`/api/admin/orders/${id}/status`, { ...status, trangThai: normalizedStatus });
+    return;
+  } catch (err: any) {
+    // Thử endpoint dự phòng 1: PUT /api/DonHang/{id}/status
+    try {
+      await adminApi.put(`/api/DonHang/${id}/status`, { ...status, trangThai: normalizedStatus });
+      return;
+    } catch { }
+
+    // Thử endpoint dự phòng 2: PUT /api/DonHang/{id}
+    try {
+      await adminApi.put(`/api/DonHang/${id}`, { maDonHang: Number(id), trangThai: normalizedStatus });
+      return;
+    } catch { }
+
+    throw err;
+  }
 }
 
 /** Xóa đơn hàng (admin): DELETE /api/admin/orders/{id} */
