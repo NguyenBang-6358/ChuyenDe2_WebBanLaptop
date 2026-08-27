@@ -238,14 +238,14 @@ export function mapSanPhamToProduct(l: ApiSanPham): Product {
 
   const rawDiscount = !isPromoExpired
     ? Number(
-        l.phanTramGiam ??
-          rawObj.phanTramGiam ??
-          rawObj.PhanTramGiam ??
-          km?.phanTramGiam ??
-          km?.PhanTramGiam ??
-          km?.phan_tram_giam ??
-          0,
-      )
+      l.phanTramGiam ??
+      rawObj.phanTramGiam ??
+      rawObj.PhanTramGiam ??
+      km?.phanTramGiam ??
+      km?.PhanTramGiam ??
+      km?.phan_tram_giam ??
+      0,
+    )
     : 0;
 
   const rawGiaGoc = Number(
@@ -586,7 +586,7 @@ export async function fetchRelatedProducts(
           return mapped;
         }
       }
-    } catch {}
+    } catch { }
   }
 
   // Fallback: Lấy tất cả laptops từ API và lọc theo cùng thương hiệu hoặc cùng danh mục
@@ -606,7 +606,7 @@ export async function fetchRelatedProducts(
       });
       return related.slice(0, 8);
     }
-  } catch {}
+  } catch { }
 
   return [];
 }
@@ -788,7 +788,7 @@ export async function fetchProductReviews(
   maSanPham: number | string,
   signal?: AbortSignal,
 ): Promise<ProductReview[]> {
-  const url = `${API_BASE_URL}/api/DanhGia/san-pham/${encodeURIComponent(String(maSanPham))}`;
+  const url = `${API_BASE_URL}/api/DanhGia?maSanPham=${encodeURIComponent(String(maSanPham))}`;
   const res = await fetch(url, {
     signal,
     headers: { Accept: "application/json" },
@@ -800,11 +800,11 @@ export async function fetchProductReviews(
   if (!Array.isArray(data)) return [];
   return data.map((d) => ({
     id: d.maDanhGia,
-    name: d.hoTen?.trim() || "Khách",
+    name: (d.tenNguoiDung || d.hoTen || d.hoTenNguoiDung || "Khách").trim(),
     rating: Math.min(5, Math.max(0, Number(d.soSao) || 0)),
     comment: d.noiDung?.trim() || "",
     date: d.ngayDanhGia ?? null,
-    avatar: d.anhDaiDien ?? null,
+    avatar: d.anhDaiDien || d.anhDaiDienNguoiDung || null,
     phanHoiCuaAdmin: d.phanHoiCuaAdmin ?? null,
   }));
 }
@@ -2181,7 +2181,7 @@ export async function fetchAdminFlashSaleProducts(): Promise<FlashSaleAdminItem[
         };
       });
     }
-  } catch {}
+  } catch { }
 
   // Fallback: Quét danh sách sản phẩm và phụ kiện có gán khuyến mãi
   try {
@@ -2207,7 +2207,7 @@ export async function fetchAdminFlashSaleProducts(): Promise<FlashSaleAdminItem[
       }
     }
     return flashList;
-  } catch {}
+  } catch { }
 
   return [];
 }
