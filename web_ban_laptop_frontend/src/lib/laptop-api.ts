@@ -236,28 +236,40 @@ export function mapSanPhamToProduct(l: ApiSanPham): Product {
     isPromoExpired = isPromoExpiredCheck(km);
   }
 
-  const giaGoc =
-    l.giaGoc !== undefined && l.giaGoc !== null
-      ? Number(l.giaGoc)
-      : rawObj.giaGoc !== undefined && rawObj.giaGoc !== null
-        ? Number(rawObj.giaGoc)
-        : undefined;
-  const phanTramGiam =
-    !isPromoExpired && l.phanTramGiam !== undefined && l.phanTramGiam !== null
-      ? Number(l.phanTramGiam)
-      : !isPromoExpired && rawObj.phanTramGiam !== undefined && rawObj.phanTramGiam !== null
-        ? Number(rawObj.phanTramGiam)
-        : undefined;
-  const giaKhuyenMai =
-    !isPromoExpired && l.giaKhuyenMai !== undefined && l.giaKhuyenMai !== null
-      ? Number(l.giaKhuyenMai)
-      : !isPromoExpired && rawObj.giaKhuyenMai !== undefined && rawObj.giaKhuyenMai !== null
-        ? Number(rawObj.giaKhuyenMai)
-        : undefined;
+  const rawDiscount = !isPromoExpired
+    ? Number(
+        l.phanTramGiam ??
+          rawObj.phanTramGiam ??
+          rawObj.PhanTramGiam ??
+          km?.phanTramGiam ??
+          km?.PhanTramGiam ??
+          km?.phan_tram_giam ??
+          0,
+      )
+    : 0;
+
+  const rawGiaGoc = Number(
+    l.giaGoc ?? rawObj.giaGoc ?? rawObj.GiaGoc ?? l.gia ?? rawObj.gia ?? rawObj.Gia ?? 0,
+  );
+
+  let rawGiaKhuyenMai = !isPromoExpired
+    ? l.giaKhuyenMai ?? rawObj.giaKhuyenMai ?? rawObj.GiaKhuyenMai
+    : undefined;
+
+  if (
+    !isPromoExpired &&
+    rawDiscount > 0 &&
+    basePriceVal > 0 &&
+    (rawGiaKhuyenMai === undefined ||
+      rawGiaKhuyenMai === null ||
+      Number(rawGiaKhuyenMai) >= basePriceVal)
+  ) {
+    rawGiaKhuyenMai = (basePriceVal * (100 - rawDiscount)) / 100;
+  }
 
   const giaKhuyenMaiNum =
-    giaKhuyenMai !== undefined && giaKhuyenMai !== null && Number(giaKhuyenMai) > 0
-      ? Number(giaKhuyenMai)
+    rawGiaKhuyenMai !== undefined && rawGiaKhuyenMai !== null && Number(rawGiaKhuyenMai) > 0
+      ? Number(rawGiaKhuyenMai)
       : null;
 
   const basePrice =
@@ -268,7 +280,11 @@ export function mapSanPhamToProduct(l: ApiSanPham): Product {
   const originalPrice =
     giaKhuyenMaiNum !== null && giaKhuyenMaiNum < basePriceVal
       ? basePriceVal
-      : giaGoc ?? basePriceVal;
+      : rawGiaGoc > basePriceVal
+        ? rawGiaGoc
+        : basePriceVal;
+  const phanTramGiam = rawDiscount > 0 ? rawDiscount : undefined;
+  const giaKhuyenMai = giaKhuyenMaiNum ?? undefined;
   const stockQuantity = Math.max(
     0,
     Number(l.soLuongTon ?? rawObj.soLuongTon ?? rawObj.SoLuongTon ?? rawObj.so_luong_ton) || 0,
@@ -399,8 +415,8 @@ export function mapSanPhamToProduct(l: ApiSanPham): Product {
             : rawObj.ma_danh_muc !== undefined
               ? Number(rawObj.ma_danh_muc)
               : undefined,
-    giaGoc,
-    originalPrice: giaGoc,
+    giaGoc: originalPrice,
+    originalPrice,
     phanTramGiam,
     ngayKetThuc:
       l.khuyenMai?.ngayKetThuc ??
@@ -446,7 +462,16 @@ export function mapFlashSaleItemToProduct(item: any): Product {
       ? `${slugify(item.ten)}-pk${item.id}`
       : `${slugify(item.ten)}-${item.id}`;
   const image = resolveLaptopImage(item.hinhAnh || "");
-  const basePrice = Number(item.giaKhuyenMai) || Number(item.giaGoc) || 0;
+  const origPrice = Number(item.giaGoc || item.gia || 0);
+  const discountVal = Number(item.phanTramGiam || item.khuyenMai?.phanTramGiam || 0);
+  let salePrice = Number(item.giaKhuyenMai || 0);
+  if ((!salePrice || salePrice >= origPrice) && discountVal > 0 && origPrice > 0) {
+    salePrice = (origPrice * (100 - discountVal)) / 100;
+  }
+  const basePrice =
+    salePrice > 0 && salePrice < origPrice ? salePrice : origPrice || salePrice;
+  const originalPrice =
+    origPrice > 0 ? origPrice : salePrice > 0 ? salePrice : basePrice;
 
   return {
     id: idStr,
@@ -462,7 +487,7 @@ export function mapFlashSaleItemToProduct(item: any): Product {
     manHinh: item.manHinh || undefined,
     pin: item.pin || undefined,
     basePrice,
-    originalPrice: Number(item.giaGoc) || 0,
+    originalPrice,
     display: item.manHinh || item.loaiPhuKien || "",
     battery: item.pin || "",
     weight: item.trongLuong || "",
@@ -2140,7 +2165,22 @@ export interface FlashSaleAdminItem {
 export async function fetchAdminFlashSaleProducts(): Promise<FlashSaleAdminItem[]> {
   try {
     const { data } = await adminApi.get<FlashSaleAdminItem[]>("/api/SanPham/flash-sale");
-    if (Array.isArray(data) && data.length > 0) return data;
+    if (Array.isArray(data) && data.length > 0) {
+      return data.map((item: any) => {
+        const orig = Number(item.giaGoc || item.gia || 0);
+        const disc = Number(item.phanTramGiam || item.khuyenMai?.phanTramGiam || 0);
+        let sale = Number(item.giaKhuyenMai || 0);
+        if ((!sale || sale >= orig) && disc > 0 && orig > 0) {
+          sale = (orig * (100 - disc)) / 100;
+        }
+        return {
+          ...item,
+          giaGoc: orig,
+          giaKhuyenMai: sale > 0 ? sale : orig,
+          phanTramGiam: disc,
+        };
+      });
+    }
   } catch {}
 
   // Fallback: Quét danh sách sản phẩm và phụ kiện có gán khuyến mãi
