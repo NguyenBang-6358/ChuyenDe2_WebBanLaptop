@@ -3324,7 +3324,12 @@ function AdminDashboardLayout() {
                     </div>
                   </div>
                   <Button
-                    onClick={() => setIsFlashPickerOpen(true)}
+                    onClick={() => {
+                      setIsFlashPickerOpen(true);
+                      if (activeKhuyenMais && activeKhuyenMais.length > 0) {
+                        setFlashPickerPromoId(activeKhuyenMais[0].maKhuyenMai);
+                      }
+                    }}
                     className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white rounded-xl h-9 text-xs font-semibold px-4 flex items-center gap-1.5 cursor-pointer shadow-md shadow-orange-500/20"
                   >
                     <Plus className="size-4" /> Thêm sản phẩm Flash Sale

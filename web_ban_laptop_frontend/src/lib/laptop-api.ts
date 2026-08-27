@@ -140,6 +140,42 @@ export const CATEGORY_MAP: Record<string, number> = {
   "Cảm ứng": 7,
 };
 
+/** Kiểm tra khuyến mãi đã hết hạn chưa, hỗ trợ tính đến hết 23:59:59 của ngày kết thúc */
+export function isPromoExpiredCheck(kmOrDate: any): boolean {
+  if (!kmOrDate) return false;
+  if (typeof kmOrDate === "object") {
+    if (
+      kmOrDate.trangThai === "het_han" ||
+      kmOrDate.trang_thai === "het_han" ||
+      kmOrDate.trangThai === "da_ket_thuc" ||
+      kmOrDate.trang_thai === "da_ket_thuc"
+    ) {
+      return true;
+    }
+  }
+  const rawDate =
+    typeof kmOrDate === "string"
+      ? kmOrDate
+      : (kmOrDate.ngayKetThuc ??
+        kmOrDate.ngay_ket_thuc ??
+        kmOrDate.NgayKetThuc ??
+        kmOrDate.ngayHetHan ??
+        kmOrDate.expireDate);
+  if (!rawDate) return false;
+
+  let clean = String(rawDate).trim();
+  if (clean.endsWith("Z")) clean = clean.slice(0, -1);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(clean)) {
+    clean += "T23:59:59.999";
+  } else if (/^\d{4}-\d{2}-\d{2}T00:00:00(\.000)?$/.test(clean)) {
+    clean = clean.replace(/T00:00:00(\.000)?$/, "T23:59:59.999");
+  }
+
+  const endMs = new Date(clean).getTime();
+  if (isNaN(endMs)) return false;
+  return endMs <= Date.now();
+}
+
 /** Map đối tượng SanPham từ API sang Product để dùng cho UI hiện tại. */
 export function mapSanPhamToProduct(l: ApiSanPham): Product {
   const rawObj = l as any;
@@ -197,17 +233,7 @@ export function mapSanPhamToProduct(l: ApiSanPham): Product {
   const km = l.khuyenMai ?? rawObj.khuyenMai ?? rawObj.KhuyenMai;
   let isPromoExpired = false;
   if (km) {
-    if (km.trangThai === "het_han" || km.trang_thai === "het_han" || km.trangThai === "da_ket_thuc") {
-      isPromoExpired = true;
-    }
-    const endStr = km.ngayKetThuc ?? km.ngay_ket_thuc ?? km.NgayKetThuc;
-    if (endStr) {
-      const cleanIso = String(endStr).endsWith("Z") ? String(endStr).slice(0, -1) : String(endStr);
-      const endMs = new Date(cleanIso).getTime();
-      if (!isNaN(endMs) && endMs <= Date.now()) {
-        isPromoExpired = true;
-      }
-    }
+    isPromoExpired = isPromoExpiredCheck(km);
   }
 
   const giaGoc =
@@ -489,9 +515,7 @@ export async function fetchFlashSaleProducts(signal?: AbortSignal): Promise<Prod
       mapped = mapped.filter((p: Product) => {
         if (!p.originalPrice || p.originalPrice <= p.basePrice) return false;
         if (p.ngayKetThuc) {
-          const cleanIso = p.ngayKetThuc.endsWith("Z") ? p.ngayKetThuc.slice(0, -1) : p.ngayKetThuc;
-          const endMs = new Date(cleanIso).getTime();
-          if (!isNaN(endMs) && endMs <= Date.now()) return false;
+          if (isPromoExpiredCheck(p.ngayKetThuc)) return false;
         }
         return true;
       });
@@ -2114,8 +2138,38 @@ export interface FlashSaleAdminItem {
   ngayKetThuc: string | null;
 }
 export async function fetchAdminFlashSaleProducts(): Promise<FlashSaleAdminItem[]> {
-  const { data } = await adminApi.get<FlashSaleAdminItem[]>("/api/SanPham/flash-sale");
-  return Array.isArray(data) ? data : [];
+  try {
+    const { data } = await adminApi.get<FlashSaleAdminItem[]>("/api/SanPham/flash-sale");
+    if (Array.isArray(data) && data.length > 0) return data;
+  } catch {}
+
+  // Fallback: Quét danh sách sản phẩm và phụ kiện có gán khuyến mãi
+  try {
+    const { data: allProds } = await adminApi.get<any[]>("/api/SanPham");
+    const flashList: FlashSaleAdminItem[] = [];
+    if (Array.isArray(allProds)) {
+      for (const p of allProds) {
+        if (p.maKhuyenMai || p.khuyenMai || (p.giaKhuyenMai && p.giaKhuyenMai < p.gia)) {
+          const discount = Number(p.phanTramGiam || p.khuyenMai?.phanTramGiam || 0);
+          const origPrice = Number(p.gia || p.giaGoc || 0);
+          const salePrice = Number(p.giaKhuyenMai || (origPrice * (100 - discount)) / 100);
+          flashList.push({
+            id: p.maSanPham,
+            ten: p.tenSanPham,
+            hinhAnh: p.anhDaiDien,
+            giaGoc: origPrice,
+            giaKhuyenMai: salePrice,
+            phanTramGiam: discount,
+            loaiSanPham: "laptop",
+            ngayKetThuc: p.khuyenMai?.ngayKetThuc || null,
+          });
+        }
+      }
+    }
+    return flashList;
+  } catch {}
+
+  return [];
 }
 
 /** Gán / gỡ flash sale cho sản phẩm: PUT /api/SanPham/{id} với maKhuyenMai */

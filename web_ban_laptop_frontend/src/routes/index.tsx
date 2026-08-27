@@ -38,6 +38,7 @@ import {
   phuKienSlug,
   API_BASE_URL,
   fetchFlashSaleProducts,
+  isPromoExpiredCheck,
 } from "@/lib/laptop-api";
 import { formatVND } from "@/lib/format";
 import { ProductCard } from "@/components/ProductCard";
@@ -289,9 +290,7 @@ function Home() {
     return flashSaleProducts.filter((p) => {
       if (!p.originalPrice || p.originalPrice <= p.basePrice) return false;
       if (p.ngayKetThuc) {
-        const cleanIso = p.ngayKetThuc.endsWith("Z") ? p.ngayKetThuc.slice(0, -1) : p.ngayKetThuc;
-        const endMs = new Date(cleanIso).getTime();
-        if (!isNaN(endMs) && endMs <= Date.now()) return false;
+        if (isPromoExpiredCheck(p.ngayKetThuc)) return false;
       }
       return true;
     });
