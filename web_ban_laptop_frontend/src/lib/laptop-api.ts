@@ -1258,7 +1258,7 @@ export interface UpdateProfileRequest {
   maNguoiDung: number;
   hoTen: string;
   email: string;
-  matKhau: string;
+  matKhau?: string;
   soDienThoai?: string | null;
   diaChi?: string | null;
   anhDaiDien?: string | null;
@@ -1321,7 +1321,7 @@ export async function fetchUserProfile(
   throw new Error("Không thể tải thông tin hồ sơ cá nhân.");
 }
 
-/** Cập nhật thông tin cá nhân: PUT /api/NguoiDung/{id} với các endpoint dự phòng */
+/** Cập nhật thông tin cá nhân: PUT /api/NguoiDung/{id} */
 export async function updateUserProfileApi(
   id: number | string,
   token: string,
@@ -1333,27 +1333,63 @@ export async function updateUserProfileApi(
     Authorization: `Bearer ${token}`,
   };
 
-  const payload = {
+  // 1. Lấy thông tin hiện tại của người dùng từ backend để bảo toàn các trường quan trọng (matKhau, vaiTro, trangThai, ngayTao)
+  let existingUser: any = null;
+  try {
+    const getRes = await fetch(`${API_BASE_URL}/api/NguoiDung/${id}`, {
+      headers: { Accept: "application/json", Authorization: `Bearer ${token}` },
+    });
+    if (getRes.ok) {
+      existingUser = await getRes.json();
+    }
+  } catch (err) {
+    console.warn("Không thể lấy thông tin chi tiết người dùng trước khi cập nhật:", err);
+  }
+
+  // 2. Tạo payload đầy đủ khớp với Entity NguoiDung trong .NET Core / MySQL
+  const payload: Record<string, any> = {
+    ...(existingUser || {}),
     maNguoiDung: Number(id),
     hoTen: data.hoTen,
     email: data.email,
-    matKhau: data.matKhau || "Placeholder123",
-    soDienThoai: data.soDienThoai ?? null,
-    diaChi: data.diaChi ?? null,
-    anhDaiDien: data.anhDaiDien ?? null,
-    vaiTro: data.vaiTro ?? "User",
-    trangThai: data.trangThai ?? "HoatDong",
+    soDienThoai: data.soDienThoai !== undefined ? data.soDienThoai : (existingUser?.soDienThoai ?? existingUser?.so_dien_thoai ?? null),
+    diaChi: data.diaChi !== undefined ? data.diaChi : (existingUser?.diaChi ?? existingUser?.dia_chi ?? null),
+    anhDaiDien: data.anhDaiDien !== undefined ? data.anhDaiDien : (existingUser?.anhDaiDien ?? null),
+    vaiTro: existingUser?.vaiTro ?? existingUser?.vai_tro ?? existingUser?.VaiTro ?? data.vaiTro ?? "KhachHang",
+    trangThai: existingUser?.trangThai ?? existingUser?.trang_thai ?? existingUser?.TrangThai ?? data.trangThai ?? "hoat_dong",
   };
 
+  // Nếu có cập nhật mật khẩu mới và không phải placeholder
+  if (data.matKhau && data.matKhau !== "Placeholder123") {
+    payload.matKhau = data.matKhau;
+  } else if (existingUser && (existingUser.matKhau || existingUser.mat_khau)) {
+    payload.matKhau = existingUser.matKhau || existingUser.mat_khau;
+  } else if (!payload.matKhau) {
+    payload.matKhau = "GoogleOAuth_Account";
+  }
+
+  // Chuẩn hóa ngày tạo nếu có
+  const rawNgayTao = payload.ngayTao ?? payload.ngay_tao ?? payload.NgayTao;
+  if (rawNgayTao) {
+    try {
+      payload.ngayTao = new Date(rawNgayTao).toISOString();
+    } catch { }
+  }
+
   // Endpoint 1: PUT /api/NguoiDung/{id}
+  let lastErrorMsg = "";
   try {
     const res = await fetch(`${API_BASE_URL}/api/NguoiDung/${id}`, {
       method: "PUT",
       headers,
       body: JSON.stringify(payload),
     });
-    if (res.ok) return;
-  } catch (e) { }
+    if (res.ok || res.status === 204) return;
+    const errData = await res.json().catch(() => null);
+    lastErrorMsg = errData?.message || errData?.title || `HTTP ${res.status}`;
+  } catch (e: any) {
+    lastErrorMsg = e.message || "Lỗi kết nối mạng";
+  }
 
   // Endpoint 2: POST /api/Auth/update-profile
   try {
@@ -1362,7 +1398,7 @@ export async function updateUserProfileApi(
       headers,
       body: JSON.stringify(payload),
     });
-    if (res.ok) return;
+    if (res.ok || res.status === 204) return;
   } catch (e) { }
 
   // Endpoint 3: PUT /api/user/profile
@@ -1372,8 +1408,10 @@ export async function updateUserProfileApi(
       headers,
       body: JSON.stringify(payload),
     });
-    if (res.ok) return;
+    if (res.ok || res.status === 204) return;
   } catch (e) { }
+
+  throw new Error(`Cập nhật cơ sở dữ liệu thất bại: ${lastErrorMsg || "Vui lòng kiểm tra kết nối Backend."}`);
 }
 
 /** Đổi mật khẩu: POST /api/auth/doi-mat-khau với các endpoint dự phòng */
@@ -1391,7 +1429,7 @@ export async function changePasswordApi(token: string, data: ChangePasswordReque
       headers,
       body: JSON.stringify(data),
     });
-    if (res.ok) return;
+    if (res.ok || res.status === 204) return;
   } catch (e) { }
 
   // Endpoint 2: POST /api/Auth/change-password
@@ -1401,7 +1439,7 @@ export async function changePasswordApi(token: string, data: ChangePasswordReque
       headers,
       body: JSON.stringify(data),
     });
-    if (res.ok) return;
+    if (res.ok || res.status === 204) return;
   } catch (e) { }
 }
 

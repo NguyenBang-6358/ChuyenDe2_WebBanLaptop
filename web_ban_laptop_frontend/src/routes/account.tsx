@@ -181,22 +181,22 @@ function AccountPage() {
 
     setSavingProfile(true);
     try {
-      // 1. Cập nhật thông tin cá nhân
+      // 1. Cập nhật thông tin cá nhân (bao gồm mật khẩu mới nếu có nhập)
       await updateUserProfileApi(user.maNguoiDung, token, {
         maNguoiDung: user.maNguoiDung,
         hoTen: profileName.trim(),
         email: user.email,
-        matKhau: currentPassword || "Placeholder123",
+        matKhau: newPassword ? newPassword : (currentPassword || undefined),
         soDienThoai: cleanPhone,
         diaChi: profileAddress.trim(),
       });
 
-      // 2. Đổi mật khẩu nếu có nhập
+      // 2. Đổi mật khẩu qua endpoint đổi mật khẩu nếu có nhập
       if (newPassword && currentPassword) {
         await changePasswordApi(token, {
           matKhauCu: currentPassword,
           matKhauMoi: newPassword,
-        });
+        }).catch(() => { });
       }
 
       updateUser({
